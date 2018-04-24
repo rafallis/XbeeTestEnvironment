@@ -8,7 +8,7 @@ class SerialGUI(QtWidgets.QMainWindow):
     def __init__(self):
         super(SerialGUI, self).__init__()
 
-        uic.loadUi('mainwindow.ui', self)
+        uic.loadUi('gui/XbeeTestFrame/mainwindow.ui', self)
 
         self.btn_connect.clicked.connect(self.hello)
         self.btn_refresh.clicked.connect(self.updateSerialPorts)
