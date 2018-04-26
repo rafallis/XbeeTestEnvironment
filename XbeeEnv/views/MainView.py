@@ -1,22 +1,25 @@
-import sys
+import sys, os
 import serial, glob
 from PyQt5 import QtWidgets, uic
 
 
-class SerialGUI(QtWidgets.QMainWindow):
+class MainView(QtWidgets.QMainWindow):
 
-    def __init__(self):
-        super(SerialGUI, self).__init__()
+    def __init__(self, main_controller):
+        super(MainView, self).__init__()
 
-        uic.loadUi('gui/XbeeTestFrame/mainwindow.ui', self)
+        dirname = os.path.dirname(__file__)
+        filename = os.path.join(dirname, 'XbeeTestFrame/mainwindow.ui')
+        uic.loadUi(filename, self)
 
+        self.connectActions()
+
+    def connectActions(self):
         self.btn_connect.clicked.connect(self.hello)
         self.btn_refresh.clicked.connect(self.updateSerialPorts)
         self.list_ports.itemClicked.connect(self.updateSerialConfigurations)
         self.btn_editPortConfig.clicked.connect(self.editPortConfig)
         self.btn_savePortConfig.clicked.connect(self.savePortConfig)
-
-        self.show()
 
     def updateSerialPorts(self):
         if sys.platform.startswith('win'):
@@ -61,7 +64,7 @@ class SerialGUI(QtWidgets.QMainWindow):
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
-    window = SerialGUI()
+    window = MainView()
     window.setWindowTitle('Xbee Test Environment')
     window.updateSerialPorts()
 
