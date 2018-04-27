@@ -3,6 +3,7 @@ from PyQt5 import QtWidgets
 
 from views.MainView import MainView
 from controllers.MainViewController import MainViewController
+import models.xbee
 
 class App(QtWidgets.QApplication):
 

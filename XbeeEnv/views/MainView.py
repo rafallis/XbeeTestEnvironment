@@ -8,6 +8,8 @@ class MainView(QtWidgets.QMainWindow):
     def __init__(self, main_controller):
         super(MainView, self).__init__()
 
+        self.main_controller = main_controller
+
         dirname = os.path.dirname(__file__)
         filename = os.path.join(dirname, 'XbeeTestFrame/mainwindow.ui')
         uic.loadUi(filename, self)
@@ -53,7 +55,7 @@ class MainView(QtWidgets.QMainWindow):
     def savePortConfig(self):
         print("Configuração da porta salva")
         self.btn_savePortConfig.setEnabled(False)
-
+    
     def serialConnect(self):
         conn = serial.Serial(self.list_ports.currentItem().text())
         print(conn)
