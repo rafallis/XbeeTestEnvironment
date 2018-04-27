@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="353a5d65-f095-4295-8c1b-24c84a8d9959" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/XbeeEnv/App.py" beforeDir="false" afterPath="$PROJECT_DIR$/XbeeEnv/App.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/XbeeEnv/views/MainView.py" beforeDir="false" afterPath="$PROJECT_DIR$/XbeeEnv/views/MainView.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/XbeeEnv/views/XbeeTestFrame/mainwindow.ui" beforeDir="false" afterPath="$PROJECT_DIR$/XbeeEnv/views/XbeeTestFrame/mainwindow.ui" afterDir="false" />
-    </list>
+    <list default="true" id="353a5d65-f095-4295-8c1b-24c84a8d9959" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +35,7 @@
           <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/.gitignore">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="440">
+                <state relative-caret-position="727">
                   <caret line="102" column="6" selection-start-line="102" selection-start-column="6" selection-end-line="102" selection-end-column="6" />
                 </state>
               </provider>
@@ -268,14 +262,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="946" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.23050459" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32912844" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32912844" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32912844" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4991453" visible="true" weight="0.15297619" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
@@ -434,7 +427,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
+        <state relative-caret-position="727">
           <caret line="102" column="6" selection-start-line="102" selection-start-column="6" selection-end-line="102" selection-end-column="6" />
         </state>
       </provider>
