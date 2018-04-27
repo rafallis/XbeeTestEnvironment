@@ -12,6 +12,8 @@ class App(QtWidgets.QApplication):
         self.main_view = MainView(self.main_ctrl)
         self.main_view.show()
 
+
 if __name__ == '__main__':
+
     app = App(sys.argv)
     sys.exit(app.exec_())
