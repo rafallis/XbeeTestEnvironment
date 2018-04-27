@@ -1,7 +1,6 @@
 import sys
 from PyQt5 import QtWidgets
 
-from views.MainView import MainView
 from controllers.MainViewController import MainViewController
 
 class App(QtWidgets.QApplication):

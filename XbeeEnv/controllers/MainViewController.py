@@ -96,10 +96,10 @@ class MainViewController(QtWidgets.QMainWindow):
     # TODO definir como salvar
     def save_uart_config(self):
         print("Configuração da porta salva")
-        self.uart.edit_toggle(False)
+        self.uart.edit_toggle()
         self.btn_savePortConfig.setEnabled(False)
 
-    def uart_edit_toggle(self, editable):
+    def uart_edit_toggle(self, editable=False):
         self.editable = editable
         self.comboBox_baudrate.setEnabled(self.editable)
         self.comboBox_bytesize.setEnabled(self.editable)
