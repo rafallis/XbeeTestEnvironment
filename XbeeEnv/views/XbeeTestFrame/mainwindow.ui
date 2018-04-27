@@ -15,7 +15,7 @@
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout_2">
-    <item row="0" column="1">
+    <item row="0" column="0">
      <widget class="QTabWidget" name="tabWidget">
       <property name="layoutDirection">
        <enum>Qt::LeftToRight</enum>
@@ -98,7 +98,11 @@
                 </widget>
                </item>
                <item row="0" column="1">
-                <widget class="QComboBox" name="comboBox_baudrate"/>
+                <widget class="QComboBox" name="comboBox_baudrate">
+                 <property name="enabled">
+                  <bool>true</bool>
+                 </property>
+                </widget>
                </item>
                <item row="1" column="0">
                 <widget class="QLabel" name="label_4">
@@ -187,14 +191,10 @@
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>378</width>
+                <width>234</width>
                 <height>319</height>
                </rect>
               </property>
-              <zorder>groupBox_2</zorder>
-              <zorder>groupBox_2</zorder>
-              <zorder>groupBox_2</zorder>
-              <zorder>groupBox_2</zorder>
              </widget>
             </widget>
            </item>
@@ -214,7 +214,7 @@
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>110</y>
+          <y>120</y>
           <width>671</width>
           <height>267</height>
          </rect>
@@ -246,8 +246,78 @@
           </widget>
          </item>
         </layout>
-        <zorder>textBrowser_2</zorder>
-        <zorder>scrollArea_2</zorder>
+       </widget>
+       <widget class="QComboBox" name="comboBox_tests">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>20</y>
+          <width>191</width>
+          <height>26</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_8">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>30</y>
+          <width>31</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Test:</string>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="spinBox_test_reps">
+        <property name="geometry">
+         <rect>
+          <x>340</x>
+          <y>20</y>
+          <width>48</width>
+          <height>24</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_start_test">
+        <property name="geometry">
+         <rect>
+          <x>690</x>
+          <y>300</y>
+          <width>113</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Start</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_abort_test">
+        <property name="geometry">
+         <rect>
+          <x>690</x>
+          <y>350</y>
+          <width>113</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Abort</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_9">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>30</y>
+          <width>60</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Loops</string>
+        </property>
        </widget>
       </widget>
      </widget>
