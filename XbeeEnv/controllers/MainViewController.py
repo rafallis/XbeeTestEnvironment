@@ -1,8 +1,9 @@
 import sys, os
 import serial, glob
-from PyQt5 import QtWidgets, uic
+from PyQt5 import QtWidgets, uic, QtCore
 
 from XbeeEnv.models.xbee import Device
+
 
 class MainViewController(QtWidgets.QMainWindow):
 
@@ -15,6 +16,7 @@ class MainViewController(QtWidgets.QMainWindow):
 
         self.init_comboboxes()
         self.connect_actions()
+        self.update_serial_ports()
 
     def init_comboboxes(self):
         self.uart_edit_toggle()
@@ -59,7 +61,7 @@ class MainViewController(QtWidgets.QMainWindow):
         self.list_ports.itemClicked.connect(self.update_serial_configurations)
         self.btn_editPortConfig.clicked.connect(self.edit_uart_config)
         self.btn_savePortConfig.clicked.connect(self.save_uart_config)
-    
+
     def update_serial_ports(self):
         if sys.platform.startswith('win'):
             ports = ['COM%s' % (i+1) for i in range(256)]
@@ -79,9 +81,9 @@ class MainViewController(QtWidgets.QMainWindow):
         config = serial.Serial(self.list_ports.currentItem().text())
         print(config)
 
-        # TODO verificar como instanciar esses valores dinamicamente
+        index = self.comboBox_baudrate.findText(str(config.baudrate), QtCore.Qt.MatchFixedString)
+        self.comboBox_baudrate.setCurrentIndex(index)
 
-        self.comboBox_baudrate.addItem(str(config.baudrate), 1)
         self.comboBox_bytesize.addItem(str(config.bytesize), 1)
         self.comboBox_parity.addItem(str(config.parity), 1)
         self.comboBox_stopbits.addItem(str(config.stopbits), 1)
@@ -120,6 +122,5 @@ if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
     window = MainViewController()
     window.setWindowTitle('Xbee Test Environment')
-    window.updateSerialPorts()
 
     sys.exit(app.exec_())
