@@ -2,6 +2,7 @@ import sys, os
 import serial, glob
 from PyQt5 import QtWidgets, uic
 
+from XbeeEnv.models.xbee import Device
 
 class MainViewController(QtWidgets.QMainWindow):
 
@@ -117,7 +118,7 @@ class MainViewController(QtWidgets.QMainWindow):
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
-    window = MainView()
+    window = MainViewController()
     window.setWindowTitle('Xbee Test Environment')
     window.updateSerialPorts()
 

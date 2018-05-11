@@ -1,7 +1,8 @@
 import sys
 from PyQt5 import QtWidgets
 
-from controllers.MainViewController import MainViewController
+from XbeeEnv.controllers.MainViewController import MainViewController
+
 
 class App(QtWidgets.QApplication):
 
